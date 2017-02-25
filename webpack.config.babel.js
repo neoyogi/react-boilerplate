@@ -52,9 +52,18 @@ module.exports = function(env) {
                     query: {
                         presets: ['react','es2015','es2016','stage-2']
                     },
-                    test: /\.(js|jsx)$/,
+                    test: /\.jsx$/,
                     exclude: /(node_modules|bower_components)/
                 },
+                {
+                    loader: 'babel-loader',
+                    query: {
+                        presets: ['es2015','es2016','stage-2']
+                    },
+                    test: /\.js$/,
+                    exclude: /(node_modules|bower_components)/
+                },
+
                 {
                     test: /\.css$/,
                     loaders: ['style-loader', 'css-loader'],
